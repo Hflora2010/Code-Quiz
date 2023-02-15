@@ -10,7 +10,7 @@ main {
     flex-direction: column;
     text-align: center;
     padding: 10px;
-    margin: 70px;
+    margin: 40px;
 }
 
 .container p {
@@ -19,7 +19,7 @@ main {
 
 #button {
     display: block;
-    padding: 40px;
+    text-align: center;
 
 }
 
