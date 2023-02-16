@@ -1,18 +1,26 @@
 var quizQuest = document.getElementById("questions-container-1");
-var startBtn = document.getElementById("button");
-var mainScrn = document.getElementById("container")
+var startBtn = document.getElementById("start-button");
+var mainScrn = document.getElementById("container");
+var resultBtn = document.getElementById("results-button");
+var timerEl = document.getElementById("timer");
 
 var questions = [
     {
         question: "What is your name?",
         answers: ["hailey", "brandon", "nightfall", "raven"],
-        correct: "hailey"
+        correct: "hailey",
+
+        question: "What is your name?",
+        answers: ["hailey", "brandon", "nightfall", "raven"],
+        correct: "hailey",
+
     }
 ]
 
 function init() {
-    mainScrn.setAttribute("class" , "hide");
-    startBtn.setAttribute("class" , "hide");
+    mainScrn.setAttribute("class", "hide");
+    startBtn.setAttribute("class", "hide");
+    resultBtn.setAttribute("class", "hide");
     quizQuest.removeAttribute("class");
 
     quizQuest.children[0].innerHTML = questions[0].question
@@ -21,8 +29,30 @@ function init() {
     var answerIndex = 1
     questions[0].answers.forEach(answer => {
         document.getElementById(`a${answerIndex}`).innerHTML = answer
-        answerIndex +=1
+        answerIndex += 1
     });
+
+    function countdown() {
+        var timeLeft = 75;
+
+        var timeInterval = setInterval(function () {
+          if (timeLeft > 1) {
+            timerEl.textContent = timeLeft;
+            timeLeft--;
+          } else if (timeLeft === 1) {
+            timerEl.textContent = timeLeft;
+            timeLeft--;
+          } else {
+            timerEl.textContent = '';
+            clearInterval(timeInterval);
+            displayMessage();
+          }
+        }, 1000);
+      }
+      
+      countdown();
+
+
 
     // loop over answers and for each do something
 

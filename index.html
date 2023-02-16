@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>JavaScript Code Quiz</title>
 </head>
+<nav id="results-button">
+    <button type="button" id="button">Results</button>
+</nav>
+
+<div id="timer">75</div>
+<!-- <div id="countDown"></div> -->
 
 <main id="container">
     <h1>JavaScript Code Quiz Challenge</h1>
@@ -15,7 +21,10 @@
         incorrectly will decrease your time by ten seconds! Press Start Quiz when you're ready!</p>
 </main>
 
-<button type="button" id="button">Start Quiz</button>
+<div id="start-button">
+    <button type="button">Start Quiz</button>
+</div>
+
 
 <section id="questions-container-1" class="hide" >
     <h1></h1>
@@ -27,7 +36,7 @@
     </div>
 </section>
 
-<section id="questions-container-2" class="hide" >
+<!-- <section id="questions-container-2" class="hide" >
     <h1>Quiz Question goes here</h1>
     <div class="answers-container">
         <button type="button" id="2a"></button>
@@ -35,7 +44,7 @@
         <button type="button" id="2c"></button>
         <button type="button" id="2d"></button>
     </div>
-</section>
+</section> -->
 
 <body>
     <script src="./assets/js/script.js"></script>
