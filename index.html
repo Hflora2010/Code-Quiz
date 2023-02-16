@@ -9,23 +9,32 @@
     <title>JavaScript Code Quiz</title>
 </head>
 
-<main class="container">
+<main id="container">
     <h1>JavaScript Code Quiz Challenge</h1>
     <p>Try to answer the following JavaScript code-related questions within the time limit.<br>Note, questions answered
         incorrectly will decrease your time by ten seconds! Press Start Quiz when you're ready!</p>
 </main>
 
-<div id="button"><button type="button">Start Quiz</button> </div>
+<button type="button" id="button">Start Quiz</button>
 
-<section class="questions-container">
-    <h1>Quiz Question goes here</h1>
+<section id="questions-container-1" class="hide" >
+    <h1></h1>
     <div class="options-container">
-        <button type="button" id="1a">Answer 1</button>
-        <button type="button" id="1b">Answer 2</button>
-        <button type="button" id="1c">Answer 3</button>
-        <button type="button" id="1d">Answer 4</button>
+        <button type="button" id="a1"></button>
+        <button type="button" id="a2"></button>
+        <button type="button" id="a3"></button>
+        <button type="button" id="a4"></button>
     </div>
-    
+</section>
+
+<section id="questions-container-2" class="hide" >
+    <h1>Quiz Question goes here</h1>
+    <div class="answers-container">
+        <button type="button" id="2a"></button>
+        <button type="button" id="2b"></button>
+        <button type="button" id="2c"></button>
+        <button type="button" id="2d"></button>
+    </div>
 </section>
 
 <body>

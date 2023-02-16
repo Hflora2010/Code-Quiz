@@ -18,8 +18,10 @@ main {
 }
 
 #button {
-    display: block;
     text-align: center;
 
 }
 
+.hide {
+    display: none;
+}
