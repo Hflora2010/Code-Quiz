@@ -6,13 +6,25 @@ var timerEl = document.getElementById("timer");
 
 var questions = [
     {
-        question: "What is your name?",
-        answers: ["hailey", "brandon", "nightfall", "raven"],
-        correct: "hailey",
+        question: "What is null",
+        answers: ["Object", "Array", "String", "None of the above"],
+        correct: "Object",
 
-        question: "What is your name?",
-        answers: ["hailey", "brandon", "nightfall", "raven"],
-        correct: "hailey",
+        question: "Which is NOT a primitive data type",
+        answers: ["String", "Boolean", "Variable", "Undefined"],
+        correct: "Variable",
+
+        question: "Which is NOT a type of loop in JavaScript",
+        answers: ["For", "If else", "While", "For In"],
+        correct: "If else",
+
+        question: "Booleans represent one of two values: true or false.",
+        answers: ["True", "false"],
+        correct: "True",
+
+        question: "Math.random returns a number between 0 and what?",
+        answers: ["10", "100", "infinity", "1"],
+        correct: "1",
 
     }
 ]
