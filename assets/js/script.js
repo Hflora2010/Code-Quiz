@@ -4,8 +4,9 @@ var mainScrn = document.getElementById("container");
 var resultBtn = document.getElementById("results-button");
 var timerEl = document.getElementById("timer");
 var userAnswer = document.getElementById("a1", "a2", "a3", "a4");
-let timeLeft = 75;
+let timeLeft = 60;
 let questionIndex = 0
+var highscorePage = document.getElementById("highscore");
 
 var questions = [
     {
@@ -73,6 +74,7 @@ var questions = [
     let currentQuestion = questions[questionIndex]
     let correctIndex = currentQuestion.correct
     if (userAnswer === currentQuestion.answers[correctIndex]) {
+      timeLeft+=5;
       // move on to the next question
       questionIndex++
       if (questionIndex === questions.length) {
@@ -84,7 +86,7 @@ var questions = [
         
       }
     } else {
-      timeLeft -= 5;
+      timeLeft -= 10;
       alert("wrong")
     }  
   }
@@ -92,7 +94,8 @@ var questions = [
   // and it will also get rid of all of the questions from the dom
   function endQuiz() {
     // prompt the user to write their initials
-
+    quizQuest.replaceWith(highscorePage);
+    console.log(highscorePage);
     // to rewrite in local storage get the array first then add the score then resave the array
     let scoresArray = localStorage.getItem('scores')
     if (!scoresArray) {
@@ -100,7 +103,7 @@ var questions = [
     }
     scoresArray.push({initials: 'whatever saved to the ', score: timeLeft})
     localStorage.setItem('scores', scoresArray)
-    window.location.href = '.html'
+    window.location.href="results-index.html"
   }
 
 
