@@ -68,6 +68,7 @@ var questions = [
     });  
   }
 
+
   function correctAnswer(event) {
     let currentButton = event.target;
     let userAnswer = currentButton.innerHTML;
@@ -79,10 +80,10 @@ var questions = [
       questionIndex++
       if (questionIndex === questions.length) {
         // then we've reached the end of the quiz
-        endQuiz()
+        endQuiz();
       } else {
         // there's still more
-        nextQuestion()
+        nextQuestion();
         
       }
     } else {
@@ -95,7 +96,7 @@ var questions = [
   function endQuiz() {
     if (timeLeft === 0);
     // window.location.href="results-index.html"
-    quizQuest.replaceWith(highscorePage);
+    // quizQuest.replaceWith(highscorePage);
     // to rewrite in local storage get the array first then add the score then resave the array
     // let scoresArray = localStorage.getItem('scores')
     // if (!scoresArray) {
@@ -105,6 +106,10 @@ var questions = [
     // localStorage.setItem('scores', scoresArray)
 
   }
+
+  //when no time is left, go to high scores page 
+  //when correct answers have all been answered with time remaining go to highscores page
+
 
   // endQuiz();
 

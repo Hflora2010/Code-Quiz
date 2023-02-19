@@ -9,7 +9,6 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 10px;
     margin: 40px;
 }
 
