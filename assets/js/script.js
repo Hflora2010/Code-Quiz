@@ -4,10 +4,12 @@ var mainScrn = document.getElementById("container");
 var resultBtn = document.getElementById("results-button");
 var timerEl = document.getElementById("timer");
 var userAnswer = document.getElementById("a1", "a2", "a3", "a4");
-var highscorePage = document.getElementById("highscore");
-var userScore = document.getElementById("userScore")
-var finishedQuizMsg = document.getElementById("finishedQuizMsg")
-var userTextbox = document.getElementById("userTextbox");
+// var highscorePage = document.getElementById("highscore");
+// var userScore = document.getElementById("userScore")
+// var finishedQuizMsg = document.getElementById("finishedQuizMsg")
+// var userTextbox = document.getElementById("userTextbox");
+var userScore = document.getElementById("userscore")
+var finalScore =document.getElementById("finalscore")
 
 var timeLeft = 60;
 var questionIndex = 0;
@@ -84,7 +86,7 @@ var questions = [
       questionIndex++
       if (questionIndex === questions.length) {
         // then we've reached the end of the quiz
-        window.location.href="results-index.html"
+        // window.location.href="results-index.html"
         endQuiz();
       } else {
         // there's still more
@@ -102,24 +104,40 @@ var questions = [
 
   function endQuiz() {
     clearInterval(timerEl);
-    finishedQuizMsg.innerHTML = "How Did You Do?";
-    showUserScore();
-    saveScore();
-    console.log(endQuiz);
+    finalScore.innerHTML = "Final Score: " + timeLeft;
   }
 
 
-  function showUserScore() {
-    userScore.innerHTML = "Your Score:" + timeLeft;
-    initTextEl = document.createElement("input");
-    initTextEl.setAttribute("id", "initials-input");
-    initTextEl.setAttribute("type", "text");
-    initTextEl.setAttribute("name", "initials");
-    initTextEl.setAttribute("placeholder", "Your Initials Here");
 
-    highscorePage.appendChild(userTextbox);
-  }
-  console.log(showUserScore);
+//   function endQuiz() {
+// //stop time (106)
+// //display score on screeen (110)
+// //render input form
+// //sumbit button (save data to local storage) and take to result-index
+  
+//     clearInterval(timerEl);
+//     // finishedQuizMsg.innerHTML = "How Did You Do?";
+
+
+//     showUserScore();
+//     saveScore();
+//   }
+
+
+//   function showUserScore() {
+//     //coming from index.html
+//     initTextEl = document.createElement("input");
+//     initTextEl.setAttribute("id", "initials-input");
+//     initTextEl.setAttribute("type", "text");
+//     initTextEl.setAttribute("name", "initials");
+//     initTextEl.setAttribute("placeholder", "Your Initials Here");
+
+//     highscorePage.appendChild(userTextbox);
+//   }
+
+
+
+
   
     // quizQuest.replaceWith(highscorePage);
     // to rewrite in local storage get the array first then add the score then resave the array
