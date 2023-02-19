@@ -95,7 +95,7 @@ var questions = [
   // and it will also get rid of all of the questions from the dom
   function endQuiz() {
     if (timeLeft === 0);
-    // window.location.href="results-index.html"
+    window.location.href="results-index.html"
     // quizQuest.replaceWith(highscorePage);
     // to rewrite in local storage get the array first then add the score then resave the array
     // let scoresArray = localStorage.getItem('scores')
@@ -104,9 +104,8 @@ var questions = [
     // }
     // scoresArray.push({initials: 'whatever saved to the ', score: timeLeft})
     // localStorage.setItem('scores', scoresArray)
-
+  
   }
-
   //when no time is left, go to high scores page 
   //when correct answers have all been answered with time remaining go to highscores page
 
@@ -128,19 +127,10 @@ var questions = [
         } else {
           timerEl.textContent = '';
           clearInterval(timeInterval);
-          displayMessage();
+          // window.location.href="results-index.html";
         }
       }, 1000);
     }
-  
-  // loop over answers and for each do something
-  
-  // if (user === questions.correct) {
-    //     // move on
-    // } else {
-      //     // subtract time etc...
-      // }
-      // console.log("click");
       
       
       // a function check answers
