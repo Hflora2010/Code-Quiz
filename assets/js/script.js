@@ -93,18 +93,21 @@ var questions = [
   // a function here to save the time to localstorage
   // and it will also get rid of all of the questions from the dom
   function endQuiz() {
-    // prompt the user to write their initials
+    if (timeLeft === 0);
+    // window.location.href="results-index.html"
     quizQuest.replaceWith(highscorePage);
-    console.log(highscorePage);
     // to rewrite in local storage get the array first then add the score then resave the array
-    let scoresArray = localStorage.getItem('scores')
-    if (!scoresArray) {
-      scoresArray = []
-    }
-    scoresArray.push({initials: 'whatever saved to the ', score: timeLeft})
-    localStorage.setItem('scores', scoresArray)
-    window.location.href="results-index.html"
+    // let scoresArray = localStorage.getItem('scores')
+    // if (!scoresArray) {
+    //   scoresArray = []
+    // }
+    // scoresArray.push({initials: 'whatever saved to the ', score: timeLeft})
+    // localStorage.setItem('scores', scoresArray)
+
   }
+
+  // endQuiz();
+
 
 
   
