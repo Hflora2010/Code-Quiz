@@ -10,11 +10,18 @@
 <body>
 
 <main id="highscore">
-  <h1>How'd You Do?</h1>
-  <h2>Highscores</h2>
+  <h1 id="userScore"></h1><br>
+  <h2 id ="finshedQuizMsg"></h2>
+  <h2>Don't like what you see? Try Again!</h2><br>
+  <a href="/index.html">
+    <button id="tryAgainBtn" type="button">Try Again</button>
+  </a><br>
+  <h3>Highscores</h3>
+  
+
   <p>
-    <label for="useInitials">Initials:</label>
-    <input id="username" type="text" placeholder="Enter Initials Here" />
+    <label for="userInitials"></label>
+    <form id="userTextbox"></form>
     <button type="button" id="hsSaveBtn">Save</button>
   </p>
 

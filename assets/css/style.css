@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-main {
+#container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -58,7 +58,15 @@ margin: 15px;
     width: 20%;
 }
 
+#highscore {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px;
+}
+
 #username {
     margin: 10px;
     height: 30px;
+    width: 20%;
 }

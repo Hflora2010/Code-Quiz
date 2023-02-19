@@ -4,9 +4,13 @@ var mainScrn = document.getElementById("container");
 var resultBtn = document.getElementById("results-button");
 var timerEl = document.getElementById("timer");
 var userAnswer = document.getElementById("a1", "a2", "a3", "a4");
-let timeLeft = 60;
-let questionIndex = 0
 var highscorePage = document.getElementById("highscore");
+var userScore = document.getElementById("userScore")
+var finishedQuizMsg = document.getElementById("finishedQuizMsg")
+var userTextbox = document.getElementById("userTextbox");
+
+var timeLeft = 60;
+var questionIndex = 0;
 
 var questions = [
     {
@@ -80,6 +84,7 @@ var questions = [
       questionIndex++
       if (questionIndex === questions.length) {
         // then we've reached the end of the quiz
+        window.location.href="results-index.html"
         endQuiz();
       } else {
         // there's still more
@@ -93,9 +98,29 @@ var questions = [
   }
   // a function here to save the time to localstorage
   // and it will also get rid of all of the questions from the dom
+
+
   function endQuiz() {
-    if (timeLeft === 0);
-    window.location.href="results-index.html"
+    clearInterval(timerEl);
+    finishedQuizMsg.innerHTML = "How Did You Do?";
+    showUserScore();
+    saveScore();
+    console.log(endQuiz);
+  }
+
+
+  function showUserScore() {
+    userScore.innerHTML = "Your Score:" + timeLeft;
+    initTextEl = document.createElement("input");
+    initTextEl.setAttribute("id", "initials-input");
+    initTextEl.setAttribute("type", "text");
+    initTextEl.setAttribute("name", "initials");
+    initTextEl.setAttribute("placeholder", "Your Initials Here");
+
+    highscorePage.appendChild(userTextbox);
+  }
+  console.log(showUserScore);
+  
     // quizQuest.replaceWith(highscorePage);
     // to rewrite in local storage get the array first then add the score then resave the array
     // let scoresArray = localStorage.getItem('scores')
@@ -105,14 +130,12 @@ var questions = [
     // scoresArray.push({initials: 'whatever saved to the ', score: timeLeft})
     // localStorage.setItem('scores', scoresArray)
   
-  }
+ 
   //when no time is left, go to high scores page 
   //when correct answers have all been answered with time remaining go to highscores page
 
 
   // endQuiz();
-
-
 
   
   function countdown() {
@@ -132,9 +155,6 @@ var questions = [
       }, 1000);
     }
       
-      
-      // a function check answers
-      // a function to move on to the next question
       
       // each time the question moves on 
       // we'll hide the current section
