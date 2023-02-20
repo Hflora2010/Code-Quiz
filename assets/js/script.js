@@ -89,7 +89,7 @@ var questions = [
       questionIndex++
       if (questionIndex === questions.length) {
         // then we've reached the end of the quiz
-        // window.location.href="results-index.html"
+
         endQuiz();
       } else {
         // there's still more
@@ -113,8 +113,8 @@ var questions = [
 
   // var scoreArr = [];
 
-  submitBtn.addEventListener("click", function()) {
-    event.preventDefault();
+  submitBtn.addEventListener("click" function()) {
+    // event.preventDefault();
     
     // console.log("SCORES: ", highScoresList)
     var userInitials = document.getElementById("userinitials").value;
@@ -127,7 +127,7 @@ var questions = [
     li.textContent = arr[i];
     li.setAttribute("data-index", i);
       var highScoresList = document.getElementById("highscores-list")
-    location.href = "results-index.html";
+    location.href = "highscores.html";
     highScoresList.appendChild(li);
   }
 
