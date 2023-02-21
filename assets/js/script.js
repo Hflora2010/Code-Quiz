@@ -10,7 +10,7 @@ var highscorePage = document.getElementById("highscore");
 // var userTextbox = document.getElementById("userTextbox");
 var userScore = document.getElementById("userscore");
 var finalScore =document.getElementById("finalscore");
-var submitBtn = document.getElementById("submit-btn");
+// var submitBtn = document.getElementById("submit-btn");
 
 
 
@@ -117,12 +117,12 @@ var questions = [
   //   event.preventDefault();
     
   //   // console.log("SCORES: ", highScoresList)
-  //   var userInitials = document.getElementById("userinitials").value;
+    var userInitials = document.getElementById("userinitials").value;
 
-  //   var scores = JSON.parse(localStorage.getItem("score")) || [];
-  //   scores.push(userInitials + ":" + timeLeft);
+    var scores = JSON.parse(localStorage.getItem("score")) || [];
+    scores.push(userInitials + ":" + timeLeft);
 
-  //   localStorage.setItem("score", JSON.stringify(scores));
+    localStorage.setItem("score", JSON.stringify(scores));
 
   //   for (let i = 0; i < scores.length; i++) {
   //   var li = document.createElement("li");
