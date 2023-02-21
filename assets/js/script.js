@@ -113,8 +113,8 @@ var questions = [
 
   // var scoreArr = [];
 
-  submitBtn.addEventListener("click" function()) {
-    // event.preventDefault();
+  submitBtn.addEventListener("click" , function(event) {
+    event.preventDefault();
     
     // console.log("SCORES: ", highScoresList)
     var userInitials = document.getElementById("userinitials").value;
@@ -123,13 +123,17 @@ var questions = [
     scores.push(userInitials + ":" + timeLeft);
 
     localStorage.setItem("score", JSON.stringify(scores));
+
+    for (let i = 0; i < arr.length; i++) {
     var li = document.createElement("li");
     li.textContent = arr[i];
     li.setAttribute("data-index", i);
       var highScoresList = document.getElementById("highscores-list")
     location.href = "highscores.html";
     highScoresList.appendChild(li);
-  }
+  }}
+  )
+  
 
 
 
