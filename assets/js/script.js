@@ -11,6 +11,7 @@ var highscorePage = document.getElementById("highscore");
 var userScore = document.getElementById("userscore");
 var finalScore =document.getElementById("finalscore");
 var submitBtn = document.getElementById("submit-btn");
+var userScore = document.getElementById("userscore");
 
 
 
@@ -50,7 +51,8 @@ var questions = [
     mainScrn.setAttribute("class", "hide");
     startBtn.setAttribute("class", "hide");
     resultBtn.setAttribute("class", "hide");
-    quizQuest.removeAttribute("class", "hide");
+    // quizQuest.removeAttribute("class", "hide");
+    quizQuest.setAttribute("style", "display: flex");
     
     
     //paint the page
@@ -91,6 +93,7 @@ var questions = [
         // then we've reached the end of the quiz
 
         endQuiz();
+
       } else {
         // there's still more
         nextQuestion();
@@ -106,7 +109,9 @@ var questions = [
 
 
   function endQuiz() {
-   clearInterval(timerEl);
+  //  clearInterval(timerEl);
+   userScore.setAttribute("style", "display: inline");
+   quizQuest.setAttribute("style", "display: none");
     finalScore.innerHTML = "Your Final Score: " + timeLeft;
     // localStorage.setItem("score", timeLeft);
   }
@@ -123,6 +128,7 @@ var questions = [
     scores.push(userInitials + ":" + timeLeft);
 
     localStorage.setItem("score", JSON.stringify(scores));
+    location.href = "highscores.html";
   })
 
   //   for (let i = 0; i < scores.length; i++) {
@@ -230,20 +236,24 @@ var questions = [
 
   // endQuiz();
 
-  
+
   function countdown() {
 
       var timeInterval = setInterval(function () {
-        if (timeLeft > 1) {
-          timerEl.textContent = timeLeft;
+        // if (timeLeft > 1) {
+          timeLeft--;  
+        timerEl.textContent = timeLeft;
           timeLeft--;
-        } else if (timeLeft === 1) {
-          timerEl.textContent = timeLeft;
-          timeLeft--;
-        } else {
-          timerEl.textContent = '';
-          clearInterval(timeInterval);
-        }
+          if (timeLeft === 0) {
+            clearInterval(timeInterval)
+          }
+        // } else if (timeLeft === 1) {
+        //   timerEl.textContent = timeLeft;
+        //   timeLeft--;
+        // } else {
+        //   timerEl.textContent = '';
+        //   clearInterval(timeInterval);
+        // }
       }, 1000);
     }
       

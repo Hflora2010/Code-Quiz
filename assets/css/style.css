@@ -42,7 +42,7 @@ margin: 15px;
 }
 
 #questions-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
     padding: 10px;
@@ -69,4 +69,8 @@ margin: 15px;
     margin: 10px;
     height: 30px;
     width: 20%;
+}
+
+#userscore {
+    display: none;
 }
