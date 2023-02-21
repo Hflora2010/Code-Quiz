@@ -4,7 +4,7 @@ var mainScrn = document.getElementById("container");
 var resultBtn = document.getElementById("results-button");
 var timerEl = document.getElementById("timer");
 var userAnswer = document.getElementById("a1", "a2", "a3", "a4");
-var highscorePage = document.getElementById("highscore");
+// var highscorePage = document.getElementById("highscore");
 // var userScore = document.getElementById("userScore")
 // var finishedQuizMsg = document.getElementById("finishedQuizMsg")
 // var userTextbox = document.getElementById("userTextbox");
@@ -12,6 +12,7 @@ var userScore = document.getElementById("userscore");
 var finalScore =document.getElementById("finalscore");
 var submitBtn = document.getElementById("submit-btn");
 var userScore = document.getElementById("userscore");
+
 
 
 
