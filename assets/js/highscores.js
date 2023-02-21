@@ -1,9 +1,5 @@
-var submitBtn = document.getElementById("submit-btn");
 
-
-submitBtn.addEventListener("click" , function(event) {
-    event.preventDefault();
-    
+var scores = JSON.parse(localStorage.getItem("score")) || [];
 
     for (let i = 0; i < scores.length; i++) {
     var li = document.createElement("li");
@@ -12,5 +8,4 @@ submitBtn.addEventListener("click" , function(event) {
       var highScoresList = document.getElementById("highscores-list")
     location.href = "highscores.html";
     highScoresList.appendChild(li);
-  }}
-  )
+  }
