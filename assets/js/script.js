@@ -15,7 +15,7 @@ var userScore = document.getElementById("userscore");
 
 
 
-var timeLeft = 60;
+var timeLeft = 10;
 var questionIndex = 0;
 
 var questions = [
@@ -48,11 +48,12 @@ var questions = [
 
   
   function init() {
-    mainScrn.setAttribute("class", "hide");
+    // mainScrn.setAttribute("class", "hide");
     startBtn.setAttribute("class", "hide");
     resultBtn.setAttribute("class", "hide");
     // quizQuest.removeAttribute("class", "hide");
     quizQuest.setAttribute("style", "display: flex");
+    mainScrn.setAttribute("style", "display: none");
     
     
     //paint the page
@@ -93,7 +94,6 @@ var questions = [
         // then we've reached the end of the quiz
 
         endQuiz();
-
       } else {
         // there's still more
         nextQuestion();
@@ -112,6 +112,8 @@ var questions = [
   //  clearInterval(timerEl);
    userScore.setAttribute("style", "display: inline");
    quizQuest.setAttribute("style", "display: none");
+   mainScrn.setAttribute("style", "display: none");
+   timerEl.setAttribute("style", "display: none");
     finalScore.innerHTML = "Your Final Score: " + timeLeft;
     // localStorage.setItem("score", timeLeft);
   }
@@ -240,11 +242,10 @@ var questions = [
   function countdown() {
 
       var timeInterval = setInterval(function () {
-        // if (timeLeft > 1) {
+        //if (timeLeft > 1) {
           timeLeft--;  
         timerEl.textContent = timeLeft;
-          timeLeft--;
-          if (timeLeft === 0) {
+          if (timeLeft <= 0) {
             clearInterval(timeInterval)
           }
         // } else if (timeLeft === 1) {
@@ -254,8 +255,8 @@ var questions = [
         //   timerEl.textContent = '';
         //   clearInterval(timeInterval);
         // }
-      }, 1000);
-    }
+  }, 1000);
+  }
       
       
       // each time the question moves on 
