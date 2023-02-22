@@ -8,6 +8,7 @@ var userScore = document.getElementById("userscore");
 var finalScore = document.getElementById("finalscore");
 var submitBtn = document.getElementById("submit-btn");
 var userScore = document.getElementById("userscore");
+var userInitials = document.getElementById("userinitials");
 
 
 
@@ -102,7 +103,8 @@ function correctAnswer(event) {
 
 
 function endQuiz() {
-  userScore.setAttribute("style", "display: inline");
+  userInitials.setAttribute("style", "display: flex; justify-content: center");
+  userScore.setAttribute("style", "display: flex; flex-direction: column; text-align: center; margin: 10px");
   quizQuest.setAttribute("style", "display: none");
   mainScrn.setAttribute("style", "display: none");
   timerEl.setAttribute("style", "display: none");

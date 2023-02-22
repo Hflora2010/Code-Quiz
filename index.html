@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Raleway:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>JavaScript Code Quiz</title>
 </head>
@@ -22,12 +25,12 @@
 <main id="container">
     <h1>JavaScript Code Quiz Challenge</h1>
     <p>Try to answer the following JavaScript code-related questions within the time limit.<br>Note, questions answered
-        incorrectly will decrease your time by ten seconds! Press Start Quiz when you're ready!</p>
+        incorrectly will decrease your time by ten seconds! Press Start Quiz when you're ready!</p><br><br>
+        <div >
+            <button id="start-button" type="button">Start Quiz</button>
+        </div>
 </main>
 
-<div id="start-button">
-    <button type="button">Start Quiz</button>
-</div>
 
 
 <section id="questions-container" class="hide" >
@@ -43,13 +46,14 @@
 <section id="userscore">
     <h1>Quiz complete!</h1><br>
     <h3 id="finalscore"></h3><br>
-    <input id="userinitials" type="text" placeholder="Enter Initials Here" />
+</section>
+<section id="userinitials">
+    <input type="text" placeholder="Enter Initials Here" />
     <a href="./highscores.html">
         <button id="submit-btn"type="button">Submit</button>
         <ul id="highscores-list"></ul>
     </a>
 </section>
-
 
     <script src="./assets/js/script.js"></script>
 </body>
