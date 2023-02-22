@@ -13,7 +13,7 @@ To use: <br>
 5. Upon your submission, you will be directed to the highscores page of all previous users. If you want the highest score, try again!
 <br>
 Below is a link to my deployed random password generator: <br>
-<a href="">JavaScript Code Quiz</a>
+<a href="https://hflora2010.github.io/Code-Quiz/">JavaScript Code Quiz</a>
 <br>
 <br>
 Below is a screenshot of the website you will access with the link above:
