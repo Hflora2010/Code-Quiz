@@ -103,8 +103,10 @@ function correctAnswer(event) {
 
 
 function endQuiz() {
-  userInitials.setAttribute("style", "display: flex; justify-content: center");
+  userInitials.setAttribute("style", "display: flex; align-text: center");
+  submitBtn.setAttribute("style", "display: inline")
   userScore.setAttribute("style", "display: flex; flex-direction: column; text-align: center; margin: 10px");
+  clearInterval(timeInterval);
   quizQuest.setAttribute("style", "display: none");
   mainScrn.setAttribute("style", "display: none");
   timerEl.setAttribute("style", "display: none");
@@ -125,11 +127,11 @@ submitBtn.addEventListener("click", function (event) {
   localStorage.setItem("score", JSON.stringify(scores));
   location.href = "highscores.html";
 })
-
+var timeInterval;
 // Function for timer.
 function countdown() {
 
-  var timeInterval = setInterval(function () {
+  timeInterval = setInterval(function () {
     timeLeft--;
     timerEl.textContent = timeLeft;
     if (timeLeft <= 0) {

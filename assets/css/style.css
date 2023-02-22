@@ -77,31 +77,54 @@
 #a1:hover {
     color: coral;
 }
+
 #a2:hover {
     color: coral;
 }
+
 #a3:hover {
     color: coral;
 }
+
 #a4:hover {
     color: coral;
 }
 
-/*--highscores.html CSS--*/
+/*--index.html CSS: Final Score and Initials --*/
+
+#userinitials-container {
+    display: flex;
+    justify-content: center;
+}
 
 #userinitials {
-display: none;
-    
+    display: none;
 }
 
 #userscore {
     display: none;
+}
 
+#submit-btn {
+    display: none;
+}
+
+#submit-btn:hover {
+    color: coral;
+}
+
+/*--High Scores CSS--*/
+
+#high-scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px;
     
-
 }
-
-#submit.button {
-    justify-content: center;
+#goBackBtn {
+    font-size: 17px;
 }
-
+#goBackBtn:hover {
+    color: coral;
+}
