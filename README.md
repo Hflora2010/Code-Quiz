@@ -12,7 +12,7 @@ To use: <br>
 4. When the quiz is complete, enter your initials in the space provided and click the "Submit" button <br>
 5. Upon your submission, you will be directed to the highscores page of all previous users. If you want the highest score, try again!
 <br>
-Below is a link to my deployed random password generator: <br>
+Below is a link to my deployed JavaScript Code Quiz: <br>
 <a href="https://hflora2010.github.io/Code-Quiz/">JavaScript Code Quiz</a>
 <br>
 <br>
