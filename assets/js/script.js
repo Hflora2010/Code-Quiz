@@ -19,23 +19,23 @@ var questionIndex = 0;
 // Quiz Questions.
 var questions = [
   {
-    question: "What is null",
-    answers: ["Object", "Array", "String", "None of the above"],
+    question: "What is null?",
+    answers: ["An Object", "An Array", "A String", "None of the above"],
     correct: 0,
   },
   {
-    question: "Which is NOT a primitive data type",
-    answers: ["String", "Boolean", "Variable", "Undefined"],
+    question: "Which is NOT a primitive data type?",
+    answers: ["A String", "A Boolean", "A Variable", "Undefined"],
     correct: 2,
   },
   {
-    question: "Which is NOT a type of loop in JavaScript",
-    answers: ["For", "If else", "While", "For In"],
+    question: "Which is NOT a type of loop in JavaScript?",
+    answers: ["A For", "An If else", "A While", "A For In"],
     correct: 1,
   },
   {
-    question: "Booleans represent one of two values: true or false.",
-    answers: ["True", "false"],
+    question: "Inside which HTML element do we put the Javascript?",
+    answers: ["Script", "Scripting", "Javascript", "Js"],
     correct: 0,
   },
   {
